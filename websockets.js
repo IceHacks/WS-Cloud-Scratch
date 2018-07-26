@@ -39,4 +39,4 @@
     };
 
     ScratchExtensions.register("WSCloud Scratch", descriptor, ext);
-});
+})();
