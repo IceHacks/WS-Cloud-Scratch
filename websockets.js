@@ -13,7 +13,7 @@
         };
     }
 
-    ext.newConnection = (host) => {
+    ext.new_connection = (host) => {
         var sid = data.sockets.push(new WebSocket(host));
         var mid = data.messages.push("");
         var socket = data.sockets[id];
@@ -24,19 +24,19 @@
         return sid;
     };
     
-    ext.checkMessage = (id) => {
+    ext.check_message = (id) => {
         return data.messages[id];
     };
 
-    ext.sendMessage = (data, id) => {
+    ext.send_message = (data, id) => {
         data.sockets[id].send(data);
     }
 
     const descriptor = {
         blocks: [
-            ["r", "Connect %s", "newConnection", "localhost:2772"],
-            ["r", "Message %n", "checkMessage", 0],
-            [" ", "Send %s %n", "sendMessage", "hello world", 0]
+            ["r", "Connect %s", "new_connection", "localhost:2772"],
+            ["r", "Message %n", "check_message", 0],
+            [" ", "Send %s %n", "send_message", "hello world", 0]
         ]
     };
 
