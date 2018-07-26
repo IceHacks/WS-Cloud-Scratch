@@ -1,4 +1,6 @@
-((ext) => {
+new (() => {
+    var ext = this;
+    
     const data = {
         sockets: [],
         messages: []
